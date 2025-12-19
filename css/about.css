@@ -137,7 +137,6 @@
 
 /* Политика конфиденциальности */
 .privacy-section {
-    display: none;
     background-color: #2c3e50;
     color: #ecf0f1;
     padding: 20px 0;
@@ -171,6 +170,13 @@
     background: #fff;
     color: #2c3e50;
 }
+.privacy-content {
+    display: none; /* Скрыто по умолчанию */
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #bdc3c7;
+}
 
 .privacy-section {
     background-color: #cf7916;
@@ -191,4 +197,5 @@
     }
 
 }
+
 
