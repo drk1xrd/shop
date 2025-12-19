@@ -171,12 +171,11 @@
     color: #2c3e50;
 }
 
-.privacy-content {
-    display: none; /* Скрыто по умолчанию */
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    color: #bdc3c7;
+.privacy-section {
+    background-color: #cf7916;
+    color: #ececec;
+    padding: 20px 0;
+    font-size: 0.9rem;
 }
 
 /* Адаптивность */
@@ -189,4 +188,5 @@
         justify-content: center;
         text-align: center;
     }
+
 }
