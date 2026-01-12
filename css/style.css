@@ -368,6 +368,10 @@ ul {
         width: 50px;
     }
 }
+.socials__qr {
+flex-direction: column;
+}
+
 
 
 
