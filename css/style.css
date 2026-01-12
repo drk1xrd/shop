@@ -257,8 +257,8 @@ ul {
     border-radius: var(--border-radius);
     font-weight: bold;
     color: #555;
-    max-width: 100%;
-    height: 20px;
+    width: 200px;
+    height: auto;
 }
 
 .socials__qr {
@@ -365,6 +365,7 @@ ul {
         flex-direction: column;
     }
 }
+
 
 
 
