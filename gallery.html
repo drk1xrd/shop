@@ -1,184 +1,76 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галерея продукции - Магазин товаров УГКТиД</title>
-    <style>
-        /* Основные стили */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        header {
-            background-color: #f8f9fa;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-        }
-
-        .theme-switcher {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .theme-switcher input {
-            display: none;
-        }
-
-        .theme-switcher label {
-            display: inline-block;
-            width: 50px;
-            height: 24px;
-            background-color: #ccc;
-            border-radius: 12px;
-            position: relative;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .theme-switcher label::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: white;
-            border-radius: 50%;
-            top: 2px;
-            left: 2px;
-            transition: left 0.3s;
-        }
-
-        .theme-switcher input:checked + label {
-            background-color: #2196F3;
-        }
-
-        .theme-switcher input:checked + label::after {
-            left: 28px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .product-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            text-align: center;
-            padding: 10px;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        .product-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-
-        .product-desc {
-            margin-top: 10px;
-            font-size: 14px;
-        }
-
-        /* Светлая тема (по умолчанию) */
-        body.light {
-            background-color: white;
-            color: black;
-        }
-
-        body.light header {
-            background-color: #f8f9fa;
-        }
-
-        body.light .product-card {
-            background-color: white;
-            border-color: #ddd;
-        }
-
-        /* Тёмная тема */
-        body.dark {
-            background-color: #121212;
-            color: white;
-        }
-
-        body.dark header {
-            background-color: #1e1e1e;
-        }
-
-        body.dark .product-card {
-            background-color: #1e1e1e;
-            border-color: #333;
-        }
-
-        body.dark .theme-switcher label {
-            background-color: #555;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Галерея продукции | UGKTID</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/gallery.css" />
 </head>
-<body class="light"> <!-- По умолчанию светлая тема -->
+<body>
+  <header class="header">
+    <a href="media/671904436867de57a6888f1b260690fd30fdf02a.png" class="logo">UGKTID</a>
 
-    <header>
-        <h1>Галерея продукции</h1>
-        <div class="theme-switcher">
-            <input type="checkbox" id="theme-toggle">
-            <label for="theme-toggle"></label>
-        </div>
-    </header>
+    <div class="theme-toggle">
+      <span class="theme-label">Тема</span>
+      <button id="themeSwitcher" class="theme-switcher" aria-label="Переключить тему">
+        <span class="theme-icon theme-icon--light">☀</span>
+        <span class="theme-icon theme-icon--dark">🌙</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <h1 class="title">Галерея продукции</h1>
+    <p class="subtitle">
+      Подборка продукции с кратким описанием.
+    </p>
 
     <section class="gallery">
-        <!-- Примеры продуктов (замените на реальные данные) -->
-        <div class="product-card">
-            <img src="https://via.placeholder.com/250x150?text=Product+1" alt="Продукт 1">
-            <p class="product-desc">Короткое описание продукта 1. Это пример товара из мастерской.</p>
+      <!-- Карточка товара -->
+      <article class="card">
+        <div class="card-image">
+          <img src="images/product-1.jpg" alt="Название товара 1" />
         </div>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/250x150?text=Product+2" alt="Продукт 2">
-            <p class="product-desc">Короткое описание продукта 2. Изготовлено с душой.</p>
+        <div class="card-body">
+          <h2 class="card-title">Название товара 1</h2>
+          <p class="card-desc">
+            Краткое описание товара 1: основные характеристики и преимущества.
+          </p>
         </div>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/250x150?text=Product+3" alt="Продукт 3">
-            <p class="product-desc">Короткое описание продукта 3. Качественный материал.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="images/product-2.jpg" alt="Название товара 2" />
         </div>
-        <div class="product-card">
-            <img src="https://via.placeholder.com/250x150?text=Product+4" alt="Продукт 4">
-            <p class="product-desc">Короткое описание продукта 4. Подходит для повседневного использования.</p>
+        <div class="card-body">
+          <h2 class="card-title">Название товара 2</h2>
+          <p class="card-desc">
+            Краткое описание товара 2: для какого использования подходит.
+          </p>
         </div>
-        <!-- Добавьте больше карточек по необходимости -->
+      </article>
+
+      <article class="card">
+        <div class="card-image">
+          <img src="images/product-3.jpg" alt="Название товара 3" />
+        </div>
+        <div class="card-body">
+          <h2 class="card-title">Название товара 3</h2>
+          <p class="card-desc">
+            Краткое описание товара 3: ключевые особенности и преимущества.
+          </p>
+        </div>
+      </article>
+
+      <!-- добавляйте карточки по мере необходимости -->
     </section>
+  </main>
 
-    <script>
-        // JS для переключателя тем
-        const toggle = document.getElementById('theme-toggle');
-        const body = document.body;
+  <footer class="footer">
+    <p>© 2026 UGKTID. Все права защищены.</p>
+  </footer>
 
-        // Загрузка сохранённой темы из localStorage
-        if (localStorage.getItem('theme') === 'dark') {
-            body.classList.remove('light');
-            body.classList.add('dark');
-            toggle.checked = true;
-        }
-
-        // Обработчик переключения
-        toggle.addEventListener('change', () => {
-            if (toggle.checked) {
-                body.classList.remove('light');
-                body.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                body.classList.remove('dark');
-                body.classList.add('light');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-    </script>
-
+  <script src="gallery.js"></script>
 </body>
 </html>
