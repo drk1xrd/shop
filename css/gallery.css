@@ -252,15 +252,7 @@ html[data-theme="light"] .card {
   color: var(--text-secondary);
 }
 
-/* Footer */
 
-.footer {
-  padding: 1rem 5vw 1.5rem;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  text-align: center;
-  border-top: 1px solid rgba(148, 163, 184, 0.25);
-}
 
 /* Responsive tweaks */
 
